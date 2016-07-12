@@ -9,7 +9,7 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative: 'Account log out is set to 15 minutes of inactivity within the IAM console
-    per accountwithin the 18F virtual infrastructure.
+    per account within the organization virtual infrastructure.
 
     '
   standard_key: NIST-800-53
@@ -17,9 +17,9 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative: 'AWS infrastructure as a service Management Life Cycle is automated to
-    use AWS CLI scripts. 18F AWS Virtual Private Cloud can use the AWS Command Line
+    use AWS CLI scripts. The organization AWS VPC can use the AWS Command Line
     Interface (CLI) to automate the account management LifeCycle within its envoriment.
-    18F uses the AWS IAM console for semi-automated automated account manamgemt
+    The organization uses the AWS IAM console for semi-automated automated account manamgemt
 
     '
   standard_key: NIST-800-53
@@ -27,18 +27,18 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative: 'IAM policies are attached to the users, enabling centralized control
-    of permissions for users under 18F AWS Account to access services, buckets or
-    objects. With IAM policies, 18F only grant users within its own AWS account permission
+    of permissions for users under the ogranizations AWS Account to access services, buckets or
+    objects. With IAM policies, the ogranizations only grant users within its own AWS account permission
     to access its Amazon resources.
 
-    18F AWS IAM policies are defined to grant only the required access for 18F staff
-    necessary to perform their functions. 18F defines least privilege access to each
+    AWS IAM policies are defined to grant only the required access for the ogranization staff
+    necessary to perform their functions. The organizatioT defines least privilege access to each
     user, group or role.
 
     Security functions within the AWS infrastructure are explicitly defined within
     IAM to include read-only permissions for any user functions.
 
-    18F incorporate running the IAM Policy Simulator to test policies for least privilege
+    The organization incorporate running the IAM Policy Simulator to test policies for least privilege
     access for users and groups.
 
     '
@@ -46,9 +46,9 @@ satisfies:
 - control_key: AC-6 (1)
   covered_by: []
   implementation_status: none
-  narrative: '18F explicitly authorizes access to administrative and security functions
-    of its virtual infrastructure and Cloud.Gov platform to designated individuals
-    within the Devops and SecOps team.  No other authrozations to security and administrative
+  narrative: 'The organization explicitly authorizes access to administrative and security functions
+    of its virtual infrastructure and residing platforms to designated individuals
+    within the organizations SecOps and DevOps team.  No other authorizations to security and administrative
     information is granted to individuals outside these teams.
 
     '
@@ -58,39 +58,36 @@ satisfies:
   implementation_status: none
   narrative: 'This control is not applicable. All Temporary accounts are handled by
     associating resources with IAM Roles. There are no guest/anonymous, group, or
-    temporary user accounts in the 18F AWS environment.
+    temporary user accounts in the organization AWS environment.
 
     '
   standard_key: NIST-800-53
 - control_key: AC-5
   covered_by: []
   implementation_status: none
-  narrative: "#### a  \n18F  implements Identity and Access Management (IAM) Policies\
+  narrative: "#### a  \nThe organization implements IAM Policies\
     \ roles and  individual user accounts for separation of duties.  IAM policies\
     \ are attached to the users, enabling centralized control of permissions for users\
-    \ under 18Fs AWS Account.\n  \n#### b  \n18F documents separation of duties of\
-    \ AWS and Cloud Foundry users. All AWS IAM users, groups and roles can be viewed\
+    \ under  AWS Account.\n  \n#### b  \nThe ogranization documents separation of duties of\
+    \ AWS users. All AWS IAM users, groups and roles can be viewed\
     \ wthin the AWS console. IAM users reports are generated to show all separation\
-    \ of duties. Cloud Checkr also generates an a report of all IAM users within 18F\
-    \ AWS environment.\n  \n"
+    \ of duties. \n"
   standard_key: NIST-800-53
 - control_key: AC-14
   covered_by: []
   implementation_status: none
-  narrative: "#### a  \nThere are no user or administrative actions than can be performed\
-    \ within 18F virtual private cloud without multifactor authentication.  Per AWS,\
-    \ users can not gain access to the AWS console without identification and authorization\
+  narrative: "#### a  \nThere are no administrative actions than can be performed\
+    \ within the organization VPC without multifactor authentication.  Per AWS,\
+    \ privileged users can not gain access to the AWS console without identification and authorization\
     \ to its a vpc.\n  \n#### b  \nIt is not possible for members of the 18F Devops\
-    \ and SecOps teams to aceess the 18F virtual private cloud infrastructure without\
-    \ muitifactor authetication and identification. All clinet users of Cloud.gov\
-    \ must login using authenticated credentials in order to access the system as\
-    \ stated in Part A above.\n  \n"
+    \ and SecOps teams to aceess the ogranization VPC infrastructure without\
+    \ muitifactor authetication. \n  \n"
   standard_key: NIST-800-53
 - control_key: AC-3
   covered_by: []
   implementation_status: none
-  narrative: "18F follows best practices by implementing the majority of the following:\n\
-    \  - Create individual accounts for anyone that requires access to the virtual\
+  narrative: "The ogranization follows best practices by implementing the majority of the following:\n\
+    \  - Create the ogranization individual accounts for anyone that requires access to the virtual\
     \ infrastructure or APIs or use IAM federation from enterprise identity management\
     \ system\n  - Use groups or roles to assign permissions to IAM users and Cloud.gov\n\
     \  - Enable multi factor authentication for all IAM users\n  - Use roles for applications\
@@ -106,16 +103,16 @@ satisfies:
     \ individual AWS user accounts. The following types are used:\n  * User \u2013\
     \ Individual IAM accounts\n  * System \u2013 system and application account not\
     \ used for interactive access\nThere are no guest/anonymous, groups, or temporary\
-    \ user accounts in the 18F Environment\n  \n#### k  \n18F does not allow shared/group\
+    \ user accounts in the organization environment\n  \n#### k  \nThe organization does not allow shared/group\
     \ account credentials within the AWS environment. All users have individual accounts\
-    \ to access the AWS environment. 18F has created specific policies that allow\
+    \ to access the AWS environment. The organization has created specific policies that allow\
     \ individual users to assume a role within the AWS environment.\n  \n"
   standard_key: NIST-800-53
 - control_key: AC-6 (5)
   covered_by: []
   implementation_status: none
-  narrative: "18F restricts privileged accounts such as administrator and root access\
-    \ accounts to designated members within the18F Devops and SecOps teams. Within\
+  narrative: "The ogranization restricts privileged accounts such as administrator and root access\
+    \ accounts to designated members within the Devops and SecOps teams. Within\
     \ the virtual infrastructure the admin account is not used for privileged access.\
     \ It\u2019s only used for billing and metrics.\n"
   standard_key: NIST-800-53
@@ -123,12 +120,12 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative: 'All users have individually unique identifiers to access and authenticate
-    to the AWS environment through the AWS management console. 18F AWS IAM users are
+    to the AWS environment through the AWS management console. The organization AWS IAM users are
     placed into IAM roles based on their assigned roles and permissions
 
     Additional temporary permission are delegated with the IAM roles usually for applications
     that run on EC2 Instances in order to access AWS resources All user accounts for
-    18F staff are maintained within the 18F AWS Environment.
+    18F staff are maintained within the organization AWS Environment.
 
     Shared or group authenticators are not utilized, Service accounts are implemented
     as Managed Services Accounts within AWS.
