@@ -41,9 +41,9 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative: "Since the infromation system platform resides within the defined virtual infrastructure,\
-    \ PU must use SSH remote access method to troubleshoot issues and\
-    \ update services that are only resolved by logging into a bastion host (BH).\
-    \ The BH themselves are virtual machine deployed within the organization\u2019s\
+    \ Privileged User (PU) must use SSH remote access method to troubleshoot issues and\
+    \ update services that are only resolved by logging into a Bastion Host (BH).\
+    \ The BH themselves are virtual machine deployed within the organization's\
     \ virtual private cloud. They are the only access points for designated PU\
     \ members to run privileged commnds that affect the entire platform. No other\
     \ privileged remote access is available to the information system.\n"
@@ -51,13 +51,13 @@ satisfies:
 - control_key: AC-4
   covered_by: []
   implementation_status: none
-  narrative: "Organization incorporates security features within its vpc such as IAM security\
+  narrative: "The organization incorporates security features within its vpc such as IAM security\
     \ groups, network ACLs, routing tables, and external gateways. Each of these items\
     \ is complementary to providing a secure, isolated network.\nNetwork Access control\
     \ lists (ACLs) are created to allow or deny traffic entering or exiting these\
     \ subnets. Each subnet has routing tables attached to them to direct the flow\
     \ of network traffic to Internet gateways, virtual private gateways, Network Address\
-    \ Translation (NAT) for private subnets.\nThe organization\u2019s VPC infrastructure\
+    \ Translation (NAT) for private subnets.\nThe organization's Virtual Private Cloud (VPC) infrastructure\
     \ has firewalls enabling filtering on both ingress and egress traffic from its\
     \ instances. The default group enables inbound communication from other members\
     \ of the same group and outbound communication to any destination.\nTraffic is\
