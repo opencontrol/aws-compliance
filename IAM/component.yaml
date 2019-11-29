@@ -77,7 +77,7 @@ satisfies:
     \ within the organization's Virtual Private Cloud (VPC) without multifactor authentication.  Per AWS,\
     \ privileged users can not gain access to the AWS console without identification and authorization\
     \ to its a VPC.\n  \n#### b  \nIt is not possible for members of the 18F Devops\
-    \ and SecOps teams to aceess the organization's VPC infrastructure without\
+    \ and SecOps teams to access the organization's VPC infrastructure without\
     \ muitifactor authetication. \n  \n
     "
   standard_key: NIST-800-53
